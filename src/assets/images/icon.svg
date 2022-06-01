@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<g id="XMLID_2_">
+	<linearGradient id="XMLID_4_" gradientUnits="userSpaceOnUse" x1="66.2407" y1="43.7782" x2="129.2346" y2="152.887">
+		<stop  offset="0" style="stop-color:#62C5FF"/>
+		<stop  offset="0.4747" style="stop-color:#6E7ADD"/>
+		<stop  offset="0.8262" style="stop-color:#754AC7"/>
+		<stop  offset="1" style="stop-color:#7837BF"/>
+	</linearGradient>
+	<circle id="XMLID_1_" fill="url(#XMLID_4_)" cx="98.7" cy="100" r="65.7"/>
+	<radialGradient id="XMLID_6_" cx="49.6556" cy="115.3303" r="40.5037" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.1232" style="stop-color:#196EA7"/>
+		<stop  offset="1" style="stop-color:#001D3D"/>
+	</radialGradient>
+	<path id="XMLID_5_" opacity="0.94" fill="url(#XMLID_6_)" d="M18.8,145h57c0,0,11.1-0.6,11.1-13.1c0-12.4-10.8-14-13.9-13.3
+		c1.4-4.2-1.8-25.9-21.3-27c-21.3-1.2-25.5,15.5-26.2,20.3c-4.7-2.2-21.9-0.8-21.9,16.3S18.8,145,18.8,145z"/>
+	<radialGradient id="XMLID_7_" cx="159.1" cy="61.5118" r="40.4086" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.1232" style="stop-color:#196EA7"/>
+		<stop  offset="1" style="stop-color:#001D3D"/>
+	</radialGradient>
+	<path id="XMLID_9_" opacity="0.94" fill="url(#XMLID_7_)" d="M128.3,91h57c0,0,11.1-0.4,11.1-12.9s-10.8-13.9-13.9-13.2
+		c1.4-4.2-1.8-25.9-21.3-27c-21.3-1.2-25.5,15.5-26.2,20.3c-4.7-2.2-21.9-0.9-21.9,16.2S128.3,91,128.3,91z"/>
+</g>
+</svg>
