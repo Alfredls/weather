@@ -1,14 +1,18 @@
 import React from 'react'
 import imgSun from '../../../assets/images/sun1.svg';
+import { v4 as uuidv4 } from 'uuid';
 
-export const Hours = () => {
+export const Hours = ({datos}) => {
+  const{ horas }=datos
+/*   console.log(horas, 'aqui...') */
   return (
     <div className='hours'>
-      <div className='hours-card'>
-        <div className='hours-t'>10 am</div>
-        <img className='hours-i' src={imgSun} alt='icon hours' />
-        <div className='hours-w'>19 &#176;</div>
-      </div>
+      {horas.map(h => <div className='hours-card' key={uuidv4()}>
+        <div className='hours-t'>{h.hora} Hrs</div>
+            <img className='hours-i' src={h.icon} alt='icon hours' />
+            <div className='hours-w'>{h.temp} &#176;</div>
+      </div>)
+      }
     </div>
   )
 }

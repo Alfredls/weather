@@ -1,17 +1,24 @@
 import React from 'react'
 import imgSun2 from '../../../assets/images/sun2.svg';
+import { v4 as uuidv4 } from 'uuid';
 
-export const Days = () => {
+export const Days = ({datos}) => {
+  const{ dias }=datos
+  /* console.log(dias); */
   return (
     <div className='day'>
-          <div className='day-item'>
-            <span>Domingo</span>
-            <img className='hours-i' src={imgSun2} alt='icon day'/>
-            <div className='day-temp'>
-              <span>19&#176;</span>
-              <span className='txt-gray'>10&#176;</span>
-            </div>
-          </div>
+      {
+        dias.map(d =>
+        <div className='day-item' key={uuidv4()}>
+          <span>Domingo</span>
+          <img className='hours-i' src={d.icon} alt='icon day'/>
+          <div className='day-temp'>
+            <span>{d.temp_max}&#176;</span>
+            <span className='txt-gray'>{d.temp_min}&#176;</span>
         </div>
+      </div>)
+      }
+      
+    </div>
   )
 }
