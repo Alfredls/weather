@@ -1,18 +1,25 @@
-import React from 'react'
-import { Sun } from '../components/home/sun/Sun';
-import { Weather } from '../components/home/weather/Weather';
-import { Hours } from '../components/home/hours/Hours';
-import { Days } from '../components/home/day/Days';
+import React, { useEffect, useState } from 'react'
 import { useApi } from '../hooks/useApi';
+import { IndexHome } from '../components/home/indexHome';
+import { Spinner } from '../components/Spinner';
 
 
 export const Home = () => {
 
+  let mostrar = 'ww';
+
   const buscarCuidad = 'madrid';
 
-  const { data } = useApi(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${buscarCuidad}&days=5`);
+  const {loading, data } = useApi(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${buscarCuidad}&days=5`);
 
+  const [weatherData, setWeatherData] = useState({})
 
+  // OBSERVA DESDE AQUI // ///////////////////////////
+
+   
+
+  const OrdenarDatos = ()=>{
+    
     const horas = []
     const horasData = data.data.forecast.forecastday[0].hour
     horasData.forEach(h =>{
@@ -24,10 +31,8 @@ export const Home = () => {
         },
       )
     })
-
-    
     const dias = [];
-    const diasData =  data.data.forecast.forecastday
+    const diasData = data.data.forecast.forecastday
     diasData.forEach(d =>{
       dias.push(
         {
@@ -41,7 +46,7 @@ export const Home = () => {
     
     const weathers = {
       ciudad: data.data.location.name,
-      pais:data.data.location.country,
+      pais: data.data.location.country,
       temp: data.data.current.temp_c.toFixed(),
       txt: data.data.current.condition.text,
       icon: data.data.current.condition.icon,
@@ -53,18 +58,35 @@ export const Home = () => {
       horas: horas,
       dias: dias,
     }
+    setWeatherData(weathers);
+  }
 
-    console.log(weathers);
-    const{ sol_salida, sol_entrada} = weathers;
-    /* console.log(ciudad, 'kkkk'); */
+  /* if(!weatherData){
+    const{ sol_salida, sol_entrada} = weatherData;
+    console.log(sol_entrada, 'luis'); 
+  } */
+
+  useEffect(() => {
+    if(!loading){
+      OrdenarDatos();
+    }
+    
+  }, [data])
+  
+
+  
+  if(loading){
+    mostrar = <Spinner />
+    console.log('off')
+  }else{
+    mostrar = <IndexHome dat={weatherData} />
+    console.log('ok')
+  }
 
   return (
     <div className='container'>
       <div className='page'>
-        <Weather datos={weathers}/>
-        <Sun salida={sol_salida} entrada={sol_entrada} />
-        <Hours datos={weathers}/>
-        <Days datos={weathers} />
+        {mostrar}
       </div>
     </div>
   )
