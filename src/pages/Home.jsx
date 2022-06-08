@@ -13,12 +13,7 @@ export const Home = () => {
 
   const {cargando, weatherData} = useDataWeather('tarija')
 
-  if(cargando){
-    console.log('SI Hay...', cargando)
-
-  }else{
-    console.log('NO Hay...', cargando)
-  }
+  
 
   
   
