@@ -27,7 +27,7 @@ export const Home = () => {
     <div className='container'>
       <div className='page'>
         {
-          cargando ? <Weather datos={weatherData} /> :<Spinner />
+          cargando ? <Weather datos={weatherData} /> :<Spinner className='spinner' />
         }
         {
           cargando ? <Sun datos={weatherData} /> :null

@@ -57,6 +57,7 @@ body{
 }
 .page{
   width: 100%;
+ /*  height: 100vh; */
 }
 .weather-header{
 /*   border: 1px solid rebeccapurple; */
@@ -199,6 +200,14 @@ body{
 
 }
 
+/* codigo spinner inicio */
+.spinner{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+ /*  align-items: center; */
+}
 .lds-ripple {
   display: inline-block;
   position: relative;
@@ -251,3 +260,4 @@ body{
     opacity: 0;
   }
 }
+/* fin spinner */
