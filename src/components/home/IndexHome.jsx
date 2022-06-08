@@ -14,7 +14,7 @@ export const IndexHome = ({dat}) => {
       {/* <Weather datos={dat}/> */}
      {/*  <Sun salida={sol_salida} entrada={sol_entrada} /> */}
       {/* <Hours datos={dat}/> */}
-      <Days datos2={dias} />
+      <Days dat={dias} />
     </>
   )
 }

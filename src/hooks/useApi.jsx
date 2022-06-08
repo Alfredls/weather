@@ -18,10 +18,10 @@ export const useApi = (API) => {
       const url = API;
       const resp = await axios.get(url, options);
       const respData = resp
-			setData(resp);
+			setData(respData);
 			setLoading(false)
 		}
 		consultaApi()
 	}, [API])
-  return {loading, data,}
+  return {loading, data}
 }

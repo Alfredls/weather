@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export const Hours = ({datos}) => {
   const{ horas }=datos
-/*   console.log(horas, 'aqui...') */
+  /* console.log(horas, 'aqui...') */
   return (
     <div className='hours'>
       {horas.map(h => <div className='hours-card' key={uuidv4()}>
