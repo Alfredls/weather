@@ -11,7 +11,7 @@ import { Hours } from '../components/home/hours/Hours';
 
 export const Home = () => {
 
-  const {cargando, weatherData} = useDataWeather('tokio')
+  const {cargando, weatherData} = useDataWeather('tarija')
 
   
 
