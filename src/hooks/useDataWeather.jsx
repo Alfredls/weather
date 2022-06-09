@@ -4,7 +4,7 @@ import { useApi } from './useApi';
 export const useDataWeather = (BUSCARCIUDAD ) => {
 
 
-  const {loading, data } = useApi(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${BUSCARCIUDAD}&days=5`);
+  const {loading, data } = useApi(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${BUSCARCIUDAD}&days=5&lang=es`);
 
   const [weatherData, setWeatherData] = useState({})
   const [cargando, setCargando] = useState(false)
