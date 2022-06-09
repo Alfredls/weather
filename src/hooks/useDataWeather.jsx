@@ -31,6 +31,7 @@ export const useDataWeather = (BUSCARCIUDAD ) => {
       dias.push(
         {
           dia: d.date,
+          lluvia_d:d.day.daily_chance_of_rain,
           icon: d.day.condition.icon,
           temp_max: d.day.maxtemp_c.toFixed(),
           temp_min: d.day.mintemp_c.toFixed(),
@@ -43,6 +44,7 @@ export const useDataWeather = (BUSCARCIUDAD ) => {
       pais: data.data.location.country,
       temp: data.data.current.temp_c.toFixed(),
       txt: data.data.current.condition.text,
+      lluvia:data.data.forecast.forecastday[0].day.daily_chance_of_rain,
       icon: data.data.current.condition.icon,
       viento: data.data.current.wind_mph,
       presion: data.data.current.pressure_in.toFixed(1),
