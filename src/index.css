@@ -327,4 +327,53 @@ body{
   width: 160px;
   height: 160px;
   border-radius: 25px;
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+}
+.card-T{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  
+}
+.card-T__time{
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  
+}
+.card-T__contry{
+  text-transform: uppercase;
+  color: var(--color7);
+  margin-top: 3px;
+  font-size: 0.9rem;
+}
+.card-D{
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  /* border: red 1px solid; */
+}
+.card-D__i{
+  width: fit-content;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.2rem;
+    /* border: rebeccapurple 1px solid; */
+}
+.icons-card{
+  color: var(--color6);
+}
+.card-I{
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  width: 60px;
+  height: 60px;
 }
