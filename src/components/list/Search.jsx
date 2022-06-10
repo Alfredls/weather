@@ -1,11 +1,29 @@
 import React from 'react'
+import { useForm } from '../../../../Lista/src/hooks/useForm'
 import iconLocation from '../../assets/images/location.svg'
 import iconSearch from '../../assets/images/search.svg'
+import { v4 as uuidv4 } from 'uuid';
 
-export const Search = () => {
+export const Search = ({handleAddCity}) => {
+
+  const [{description}, handleInputChange, reset] = useForm({
+    description: ''
+  })
+
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    /* console.log('luis') */
+    const newSearch ={
+      id:uuidv4(),
+      city: description,
+    }
+    handleAddCity(newSearch)
+    reset()
+  }
+
   return (
     <div className='search'>
-      <form className='search-form'>
+      <form className='search-form' onSubmit={handleSubmit}>
         <button className='btn-form' type='submit'
         >
           <img 
@@ -19,6 +37,9 @@ export const Search = () => {
           placeholder='Buscar'
           autoComplete='off'
           className='form-input'
+          name='description'
+          onChange={handleInputChange}
+          value={description}
         />
       </form>
       <img 

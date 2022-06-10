@@ -329,7 +329,7 @@ body{
   border-radius: 25px;
   position: relative;
   padding: 1rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .card-T{
   display: flex;
@@ -373,7 +373,20 @@ body{
 .card-I{
   position: absolute;
   right: 1rem;
-  top: 1.5rem;
-  width: 60px;
-  height: 60px;
+  top: 1rem;
+  width: 65px;
+  height: 65px;
 }
+.card-delete{
+  color: var(--color5);
+  position: absolute;
+  font-size: 2.2rem;
+  top: -10px;
+  right: -12px;
+  z-index: 1;
+  cursor: pointer;
+}
+  .card-delete:active{
+    font-size: 2rem;
+    cursor: pointer;
+  }
