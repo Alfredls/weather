@@ -1,7 +1,6 @@
 import React, { useEffect, useReducer } from 'react'
 import { CardList } from '../components/list/CardList'
 import { Search } from '../components/list/Search'
-import { v4 as uuidv4 } from 'uuid';
 import { cityReducer } from '../reducer/cityReducer';
 
 const init = ()=>{
