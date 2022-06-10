@@ -12,7 +12,7 @@ export const Search = ({handleAddCity}) => {
 
   const handleSubmit = (e)=>{
     e.preventDefault()
-    /* console.log('luis') */
+    if(description.length <= 1)return
     const newSearch ={
       id:uuidv4(),
       city: description,

@@ -343,6 +343,9 @@ body{
   margin-bottom: 6px;
   
 }
+.card-T__city{
+  text-transform: capitalize;
+}
 .card-T__contry{
   text-transform: uppercase;
   color: var(--color7);

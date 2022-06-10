@@ -1,20 +1,21 @@
-import React, { useReducer } from 'react'
+import React, { useEffect, useReducer } from 'react'
 import { CardList } from '../components/list/CardList'
 import { Search } from '../components/list/Search'
 import { v4 as uuidv4 } from 'uuid';
 import { cityReducer } from '../reducer/cityReducer';
 
-const init = [
-  {
-    id:uuidv4(),
-    city: 'tarija',
-  }
-]
+const init = ()=>{
+  return JSON.parse(localStorage.getItem('city')) || []
+}
 
 export const List = () => {
 
-  const[citys, dispatch] = useReducer(cityReducer, init)
-  /* console.log(citys) */
+  const[citys, dispatch] = useReducer(cityReducer, [], init)
+
+  useEffect(() => {
+    localStorage.setItem('city', JSON.stringify(citys))
+  }, [citys])
+  
 
   const handleAddCity = (newCity)=>{
     dispatch({

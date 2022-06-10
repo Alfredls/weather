@@ -16,7 +16,7 @@ export const CardList = ({citys, handleDeleteCity}) => {
             <MdDeleteForever className='card-delete' onClick={()=>handleDeleteCity(c.id)}/>
             <div className='card-T'>
               <span className='card-T__time'>22&#176;</span>
-              <span>{c.city}</span>
+              <span className='card-T__city'>{c.city}</span>
               <span className='card-T__contry'>Bolivia</span>
             </div>
             <div className='card-D'>
