@@ -13,11 +13,6 @@ export const Home = () => {
 
   const {cargando, weatherData} = useDataWeather('tarija')
 
-  
-
-  
-  
-
   return (
     <div className='container'>
       <div className='page'>

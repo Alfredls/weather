@@ -90,9 +90,9 @@ body{
 }
 .imgBig{
   position: absolute;
-  width: 400px;
-  top: -115px;
-  right: -185px;
+  width: 230px;
+  top: -10px;
+  right: -30px;
 
 }
 .weather-temp{
@@ -172,7 +172,7 @@ body{
 .hours-i{
   /* width: 25px; */
   /* height: 25px; */
-  width: 55px;
+  width: 40px;
 }
 .hours-w{
   font-size: 1.6rem;

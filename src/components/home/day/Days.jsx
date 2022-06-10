@@ -17,7 +17,11 @@ export const Days = ({datos}) => {
           <span>{elDia(d.dia)}</span>
           <div className='days-i'>
             <span className='txt-gray data-icon'><TbDroplet className='icons-d'/>{d.lluvia_d}%</span>
-            <img className='hours-i' src={d.icon} alt='icon day'/>
+            <img 
+              className='hours-i' 
+              src={`/src/assets/${d.icon}.svg`} 
+              alt='icon day'
+            />
           </div>
           <div className='day-temp'>
             <span>{d.temp_max}&#176;</span>

@@ -20,9 +20,10 @@ export const useDataWeather = (BUSCARCIUDAD ) => {
         {
           hora: h.time.substring(11, 13),
           temp: h.temp_c.toFixed(),
-          icon: h.condition.icon
+          icon: h.condition.icon.substring(35, h.condition.icon.length - 4)
         },
-      )
+        )
+
     })
 
     const dias = [];
@@ -32,7 +33,7 @@ export const useDataWeather = (BUSCARCIUDAD ) => {
         {
           dia: d.date,
           lluvia_d:d.day.daily_chance_of_rain,
-          icon: d.day.condition.icon,
+          icon: d.day.condition.icon.substring(35, d.day.condition.icon.length - 4),
           temp_max: d.day.maxtemp_c.toFixed(),
           temp_min: d.day.mintemp_c.toFixed(),
         },
@@ -45,7 +46,7 @@ export const useDataWeather = (BUSCARCIUDAD ) => {
       temp: data.data.current.temp_c.toFixed(),
       txt: data.data.current.condition.text,
       lluvia:data.data.forecast.forecastday[0].day.daily_chance_of_rain,
-      icon: data.data.current.condition.icon,
+      icon: data.data.current.condition.icon.substring(35, data.data.current.condition.icon.length - 4),
       viento: data.data.current.wind_mph,
       presion: data.data.current.pressure_in.toFixed(1),
       sensacion: data.data.current.feelslike_c,
