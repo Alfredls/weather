@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { useApi } from '../hooks/useApi';
-import { IndexHome } from '../components/home/indexHome';
+import React from 'react'
 import { Spinner } from '../components/Spinner';
 import { useDataWeather } from '../hooks/useDataWeather';
 import { Weather } from '../components/home/weather/Weather';
@@ -17,16 +15,16 @@ export const Home = () => {
     <div className='container'>
       <div className='page'>
         {
-          cargando ? <Weather datos={weatherData} /> :<Spinner className='spinner' />
-        }
-        {
-          cargando ? <Sun datos={weatherData} /> :null
-        }
-        {
-          cargando ? <Hours datos={weatherData} /> :null
-        }
-        {
-          cargando ? <Days datos={weatherData} /> :null
+          !cargando 
+          ?  <Spinner className='spinner' />
+          : (
+            <>
+              <Weather datos={weatherData} />
+              <Sun datos={weatherData} />
+              <Hours datos={weatherData} />
+              <Days datos={weatherData} />
+            </>
+          )
         }
       </div>
     </div>
