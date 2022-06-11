@@ -1,7 +1,7 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useContext } from 'react'
 import { CardList } from '../components/list/CardList'
 import { Search } from '../components/list/Search'
-import { cityReducer } from '../reducer/cityReducer';
+import { CityContext } from '../reducer/cityContext';
 
 const init = ()=>{
   return JSON.parse(localStorage.getItem('city')) || []
@@ -9,25 +9,8 @@ const init = ()=>{
 
 export const List = () => {
 
-  const[citys, dispatch] = useReducer(cityReducer, [], init)
+  const {citys, handleAddCity, handleDeleteCity} = useContext(CityContext)
 
-  useEffect(() => {
-    localStorage.setItem('city', JSON.stringify(citys))
-  }, [citys])
-  
-
-  const handleAddCity = (newCity)=>{
-    dispatch({
-      type: 'add',
-      payload: newCity,
-    })
-  }
-  const handleDeleteCity = (id)=>{
-    dispatch({
-      type: 'delete',
-      payload: id,
-    })
-  }
 
   return (
     <div className='container'>
