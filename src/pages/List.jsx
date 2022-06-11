@@ -27,7 +27,6 @@ export const List = () => {
       type: 'delete',
       payload: id,
     })
-    console.log(id)
   }
 
   return (

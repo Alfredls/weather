@@ -11,7 +11,7 @@ import { Hours } from '../components/home/hours/Hours';
 
 export const Home = () => {
 
-  const {cargando, weatherData} = useDataWeather('tarija')
+  const {cargando, weatherData} = useDataWeather('madrid')
 
   return (
     <div className='container'>

@@ -1,7 +1,11 @@
 export const cityReducer = (state = [], action) => {
   switch (action.type) {
     case "add":
-      return [...state, action.payload];
+      let newState = state;
+      state.length >= 12
+        ? (newState = state.filter((todo) => todo.id !== state[11].id))
+        : newState;
+      return [action.payload, ...newState];
     case "delete":
       return state.filter((todo) => todo.id != action.payload);
     default:
