@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useApi } from './useApi';
 
-export const useDataWeather = (BUSCARCIUDAD ) => {
+export const useDataWeather = (BUSCARCIUDAD='tarija' ) => {
 
 
   const {loading, data } = useApi(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${BUSCARCIUDAD}&days=5&lang=es`);

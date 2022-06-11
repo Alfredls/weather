@@ -12,9 +12,12 @@ export const Home = () => {
 
   const{citys} = useContext(CityContext)
 
-  console.log(citys);
+ const buscar = citys.find(c => c.active === true)
+ let cuidad = buscar? buscar.city   : 'Tarija'
+ /* console.log(cuidad) */
 
-  const {cargando, weatherData} = useDataWeather('madrid')
+
+  const {cargando, weatherData} = useDataWeather(cuidad)
 
   return (
     <div className='container'>

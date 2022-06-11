@@ -4,11 +4,13 @@ import { cityReducer } from "./cityReducer";
 const init = ()=>{
   return JSON.parse(localStorage.getItem('city')) || []
 }
-
+/* let navigate = useNavigate(); */
 export const CityContext = createContext(init);
 
 
 export const ContextProvider = ({ children }) => {
+
+  
 
   const[citys, dispatch] = useReducer(cityReducer, [], init)
 
