@@ -16,6 +16,7 @@ export const Search = ({handleAddCity}) => {
     const newSearch ={
       id:uuidv4(),
       city: description,
+      active: false,
     }
     handleAddCity(newSearch)
     reset()

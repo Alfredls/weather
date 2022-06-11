@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const WeatherHeader = ({ciudad, temp, txt, icon}) => {
-  console.log(icon, "..iconss")
+  /* console.log(icon, "..iconss") */
   return (
       <div className='weather-header'>
         <h2 className='title'>{ciudad}</h2>

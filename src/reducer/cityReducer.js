@@ -8,6 +8,13 @@ export const cityReducer = (state = [], action) => {
       return [action.payload, ...newState];
     case "delete":
       return state.filter((todo) => todo.id != action.payload);
+    case "activeCard":
+      console.log(action.payload, "..id..");
+      return state.map((todo) =>
+        todo.id === action.payload
+          ? { ...todo, active: true }
+          : { ...todo, active: false }
+      );
     default:
       return state;
   }

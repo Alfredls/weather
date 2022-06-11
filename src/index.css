@@ -389,7 +389,10 @@ body{
   z-index: 1;
   cursor: pointer;
 }
-  .card-delete:active{
-    font-size: 2rem;
-    cursor: pointer;
-  }
+.card-delete:active{
+  font-size: 2rem;
+  cursor: pointer;
+}
+.actvive-card{
+  outline: #1b3b4e solid 1px;
+}

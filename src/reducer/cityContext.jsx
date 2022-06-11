@@ -28,9 +28,15 @@ export const ContextProvider = ({ children }) => {
       payload: id,
     })
   }
+  const handleActive = (id)=>{
+    dispatch({
+      type: 'activeCard',
+      payload: id,
+    })
+  }
 
   return (
-    <CityContext.Provider value={{citys, handleAddCity, handleDeleteCity}}>
+    <CityContext.Provider value={{citys, handleAddCity, handleDeleteCity, handleActive}}>
       {children}
     </CityContext.Provider>
   )

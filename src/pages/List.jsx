@@ -9,14 +9,14 @@ const init = ()=>{
 
 export const List = () => {
 
-  const {citys, handleAddCity, handleDeleteCity} = useContext(CityContext)
+  const {citys, handleAddCity, handleDeleteCity, handleActive} = useContext(CityContext)
 
 
   return (
     <div className='container'>
       <div className='page'>
         <Search handleAddCity={handleAddCity} />
-        <CardList citys={citys} handleDeleteCity={handleDeleteCity} />
+        <CardList citys={citys} handleDeleteCity={handleDeleteCity} handleActive={handleActive}/>
       </div>
     </div>
   )
