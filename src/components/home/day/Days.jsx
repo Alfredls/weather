@@ -18,7 +18,7 @@ export const Days = ({datos}) => {
             <span className='txt-gray data-icon'><TbDroplet className='icons-d'/>{d.lluvia_d}%</span>
             <img 
               className='hours-i' 
-              src={`/assets/${d.icon}.svg`} 
+              src={`./assets/${d.icon}.svg`} 
               alt='icon day'
             />
           </div>
