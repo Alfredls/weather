@@ -12,7 +12,7 @@ export const WeatherHeader = ({ciudad, temp, txt, icon}) => {
         <img 
           className='imgBig' 
           alt='icon-imagen' 
-          src={`/src/assets/${icon}.svg`} 
+          src={`/assets/${icon}.svg`} 
         />
       </div>
   )

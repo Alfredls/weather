@@ -1,7 +1,7 @@
 import React from 'react'
 
-import imgSun from '../../../assets/images/sun1.svg';
-import imgSun2 from '../../../assets/images/sun2.svg';
+import imgSun from '../../../../assets/images/sun1.svg';
+import imgSun2 from '../../../../assets/images/sun2.svg';
 
 export const Sun = ({datos}) => {
 

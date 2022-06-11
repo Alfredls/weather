@@ -12,7 +12,7 @@ export const Hours = ({datos}) => {
             <div className='hours-t'>{h.hora} Hrs</div>
                 <img 
                   className='hours-i' 
-                  src={`/src/assets/${h.icon}.svg`}
+                  src={`/assets/${h.icon}.svg`}
                   alt='icon hours'
                 />
                 <div className='hours-w'>

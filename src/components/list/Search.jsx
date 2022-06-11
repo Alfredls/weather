@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from '../../../../Lista/src/hooks/useForm'
-import iconLocation from '../../assets/images/location.svg'
-import iconSearch from '../../assets/images/search.svg'
+import iconLocation from '../../../assets/images/location.svg'
+import iconSearch from '../../../assets/images/search.svg'
 import { v4 as uuidv4 } from 'uuid';
 
 export const Search = ({handleAddCity}) => {

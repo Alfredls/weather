@@ -33,7 +33,7 @@ export const CardItem = ({cities = 'tarija'}) => {
             {viento}km/h
           </span>
         </div>
-        <img src={`/src/assets/${icon}.svg`} alt="icon card" className='card-I' />
+        <img src={`/assets/${icon}.svg`} alt="icon card" className='card-I' />
         </>
       )
     }
