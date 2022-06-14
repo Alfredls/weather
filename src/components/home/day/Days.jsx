@@ -13,7 +13,7 @@ export const Days = ({datos}) => {
       {
         dias.map(d =>
         <div className='day-item' key={uuidv4()}>
-          <span>{elDia(d.dia)}</span>
+          <span className='day-day'>{elDia(d.dia)}</span>
           <div className='days-i'>
             <span className='txt-gray data-icon'><TbDroplet className='icons-d'/>{d.lluvia_d}%</span>
             <img 

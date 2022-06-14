@@ -33,6 +33,9 @@ body{
 .page {
   width: 100%;
  /*  height: 100vh; */
+ /* border: #f74040 1px solid; */
+ padding: 1rem;
+ overflow: hidden;
 }
 .nav{
   /* border: 1px solid white; */
@@ -40,7 +43,7 @@ body{
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 70px;
+  height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +54,7 @@ body{
 .item{
   color: var(--color3);
  /*  border: 1px solid white; */
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: var(--color7);
   display: flex;
 }
@@ -76,7 +79,7 @@ body{
   font-size: 1.5rem;
   position: absolute;
   z-index: 1;
-  top: 2rem;
+  top: 2.3rem;
 }
 .grados{
   font-size: 6rem;
@@ -90,13 +93,13 @@ body{
   width: fit-content;
   padding: 7px 20px;
   border-radius: 20px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 .imgBig{
   position: absolute;
-  width: 230px;
-  top: -10px;
-  right: -30px;
+  width: 190px;
+  top: 0px;
+  right: -20px;
 
 }
 .weather-temp{
@@ -109,12 +112,12 @@ body{
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  /* margin-top: 0.2rem; */
 }
 .data-icon{
   /* border: #c9cee7 1px solid; */
   width: fit-content;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   padding: 5px 10px;
@@ -123,13 +126,13 @@ body{
 }
 .icons-d{
   color: var(--color6);
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 .sun{
   width: 100%;
   height: 90px;
   /* border: #c9cee7 1px solid; */
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   position: relative;
   background-image: url('./assets/images/line-sun.svg');
   background-repeat: no-repeat;
@@ -154,69 +157,99 @@ body{
 .hours{
   display: flex;
   width: 100%;
-  height: 115px;
+  height: 100px;
   margin-top: 1rem;
   overflow-y: hidden;
-  overflow-x: auto; 
+  overflow-x: scroll; 
+  scrollbar-color: var(--color8) rgba(255, 255, 255, 0);
  /*  border: #c9cee7 1px solid; */
 }
+.hours::-webkit-scrollbar{
+  -webkit-appearance: none;
+}
+.hours::-webkit-scrollbar:horizontal {
+  width: 50px;
+}
+.hours::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+/*   border: 1px solid white; */
+  background-color: var(--color7);
+}
+.hours::-webkit-scrollbar-track {
+  background-color: var(--color2);
+  border-radius: 8px;
+}
+
+
 .hours-card{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-width: 80px;
+  min-width: 70px;
   /* height: 100%; */
-  margin-right: 10px;
-  /* border: 1px solid red; */
+/*   margin-right: 10px; */
+/*   border: 1px solid red; */
 }
 .hours-t{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .hours-i{
-  /* width: 25px; */
-  /* height: 25px; */
-  width: 40px;
+  width: 37px;
 }
 .hours-w{
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 .day{
   /* border: 1px solid red; */
   width: 100%;
   margin-top: 1rem;
-  margin-bottom: 5rem;
+  margin: 1.5rem 0 5rem 0;
 }
 .day-item{
   display: flex;
   max-width: 800px;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2rem;
-  /* margin-top: 0.5rem;
-  border: 1px solid red; */
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(30, 62, 100, 0.397);
+  padding: 0.3rem 0;
+  
 }
-.day-temp{
-  font-weight: 700;
-}
-.txt-gray{
-  color: var(--color7);
-  margin-left: 1rem;
 
+.day-day{
+  /* border: red solid 1px; */
+  flex: 1;
 }
-.daysH{
-  padding: 0;
-  margin: 0;
-  font-weight: 200;
-  font-size: 1.3rem;
-  color: var(--color7);
-}
-.days-i{
+.days-i {
   display: flex;
   justify-content: center;
   align-items: center;
   /* border: red solid 1px; */
+  flex: 1;
 }
+.day-temp{
+  font-weight: 700;
+  /* border: 1px solid red; */
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+
+.txt-gray{
+  color: var(--color7);
+  margin-left: 0.5rem;
+
+}
+.daysH{
+  padding: 0;
+  margin-top: 1.5rem;
+  font-weight: 200;
+  font-size: 1.2rem;
+  color: var(--color7);
+}
+
 
 /* codigo spinner inicio */
 .spinner{
@@ -318,15 +351,15 @@ body{
 .search-cards{
   display: grid;
   padding: 1.5rem 0 5rem ;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 155px));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
   justify-content:center;
   gap: 1rem;
 }
 .card-s{
   background-color: var(--color8);
-  width: 160px;
-  height: 160px;
-  border-radius: 25px;
+  width: 150px;
+  height: 150px;
+  border-radius: 22px;
   position: relative;
   padding: 1rem;
   /* overflow: hidden; */
@@ -338,23 +371,24 @@ body{
   
 }
 .card-T__time{
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 200;
   margin-bottom: 6px;
   
 }
 .card-T__city{
   text-transform: capitalize;
+  font-size: 0.8rem
 }
 .card-T__contry{
   text-transform: uppercase;
   color: var(--color7);
   margin-top: 3px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 .card-D{
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.8rem;
   left: 0;
   display: flex;
   justify-content: space-around;
@@ -363,7 +397,7 @@ body{
 }
 .card-D__i{
   width: fit-content;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -375,7 +409,7 @@ body{
 }
 .card-I{
   position: absolute;
-  right: 1rem;
+  right: 0.5rem;
   top: 1rem;
   width: 65px;
   height: 65px;
@@ -383,16 +417,20 @@ body{
 .card-delete{
   color: var(--color5);
   position: absolute;
-  font-size: 2.2rem;
-  top: -10px;
-  right: -12px;
-  z-index: 1;
+  top: -18px;
+  right: -20px;
+  z-index: 9;
   cursor: pointer;
+/*   border: 1px solid yellow; */
+  width: 50px;
+  height: 50px;
+  padding: 0.4rem;
+
 }
 .card-delete:active{
   font-size: 2rem;
   cursor: pointer;
 }
 .actvive-card{
-  outline: #1b3b4e solid 1px;
+  outline: #1b3b4e solid 2px;
 }
