@@ -16,14 +16,12 @@ export const Home = () => {
 const {geo, selec} = geoLocation()
 const [gl, setGl] = useState('')
 
-
-
 useEffect(() => {
-  selec? setGl(`${geo.lat} ${geo.long}`) : setGl("Tarija")
+  selec? setGl(`${geo.lat} ${geo.long}`) : setGl('Tarija')
 }, [selec])
 
 
-console.log(gl, selec)
+console.log(gl, selec, '...', geo)
 
 
   const{citys} = useContext(CityContext)
@@ -31,7 +29,7 @@ console.log(gl, selec)
  const buscar = citys.find(c => c.active === true)
 
 
- let cuidad = buscar? buscar.city   :gl
+ let cuidad = buscar? buscar.city   : gl
 
 
 

@@ -38,7 +38,7 @@ export const geoLocation = () => {
   
 
 
-  /* console.log(geo, '..dentro') */
+  console.log(geo, '..dentro')
 
   return {geo, selec}
 }
