@@ -8,10 +8,20 @@ export const CardList = ({citys, handleDeleteCity, handleActive}) => {
 
   let navigate = useNavigate();
   
+  const elimina = (e)=>{
+    {/* <SyntheticEve></SyntheticEve> */}
+  /*   handleDeleteCity(id) */
+  e.stopPropagation()
+  console.log('luis')
+  }
+  
+
   const seleccionar = (id)=>{
     handleActive(id)
     navigate("/", { replace: true });
   }
+
+  
   return (
     <div className='search-cards'>
       {
@@ -21,7 +31,10 @@ export const CardList = ({citys, handleDeleteCity, handleActive}) => {
           key={c.id} 
           onClick={()=>seleccionar(c.id)}
           >
-            <MdDeleteForever className='card-delete' onClick={()=>handleDeleteCity(c.id)}/>
+            <div className='card-delete' onClick={(e)=>{e.stopPropagation(), handleDeleteCity(c.id)}}>
+              <MdDeleteForever />
+            </div>
+    
             <CardItem cities={c.city} />
           </div>
           

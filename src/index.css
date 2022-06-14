@@ -373,7 +373,7 @@ body{
 .card-T__time{
   font-size: 3rem;
   font-weight: 200;
-  margin-bottom: 6px;
+  /* margin-bottom: 3px; */
   
 }
 .card-T__city{
@@ -417,14 +417,17 @@ body{
 .card-delete{
   color: var(--color5);
   position: absolute;
-  top: -18px;
-  right: -20px;
-  z-index: 9;
+  font-size: 2rem;
+  top: -12px;
+  right: -12px;
+  z-index: 9 !important;
   cursor: pointer;
-/*   border: 1px solid yellow; */
-  width: 50px;
-  height: 50px;
-  padding: 0.4rem;
+  /* border: 1px solid yellow; */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 .card-delete:active{
